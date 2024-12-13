@@ -1,0 +1,12 @@
+<div class="w-100 d-flex flex-col">
+  <div
+    class="w-100 d-flex flex-row a-i-center p-l-16 p-b-8"
+    *ngFor="let device of devices"
+  >
+    <i [c8yIcon]="'c8y-device'"></i>
+    {{ device?.['name'] }}
+    <div class="device-link">
+      <i [c8yIcon]="'link'" [routerLink]="''"></i>
+    </div>
+  </div>
+</div>
