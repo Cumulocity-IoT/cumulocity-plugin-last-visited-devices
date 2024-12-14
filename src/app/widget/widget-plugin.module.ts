@@ -21,9 +21,9 @@ import { RouterModule } from '@angular/router';
   ],
   providers: [
     hookWidget({
-      id: 'angular.widget.plugin',
-      label: gettext('Module Federation widget'),
-      description: gettext('Widget added via Module Federation'),
+      id: 'last.visited.devices',
+      label: gettext('Last visited devices'),
+      description: gettext('Last visited devices'),
       component: WidgetPluginComponent,
       previewImage: assetPaths.previewImage,
       configComponent: WidgetPluginConfig,

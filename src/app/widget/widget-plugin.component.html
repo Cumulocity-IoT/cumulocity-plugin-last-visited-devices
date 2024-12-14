@@ -1,12 +1,55 @@
-<div class="w-100 d-flex flex-col">
-  <div
-    class="w-100 d-flex flex-row a-i-center p-l-16 p-b-8"
-    *ngFor="let device of devices"
-  >
-    <i [c8yIcon]="'c8y-device'"></i>
-    {{ device?.['name'] }}
-    <div class="device-link">
-      <i [c8yIcon]="'link'" [routerLink]="''"></i>
-    </div>
+<ng-container *ngIf="devices.length; else noDevices">
+  <div class="w-100 d-flex flex-col" *ngFor="let device of devices">
+    <ng-container *ngIf="!device?.extraData?.length; else withExtra">
+      <!-- Single row layout -->
+      <div
+        class="w-100 d-flex flex-row a-i-center j-c-between p-l-16 p-b-8 p-r-16"
+      >
+        <div class="icon d-flex a-i-center j-c-center">
+          <i [c8yIcon]="'c8y-device'"></i>
+        </div>
+        <span>{{ device?.['name'] }}</span>
+        <span>{{ device?.lastVisit | date : "short" }}</span>
+        <div
+          class="m-l-16 device-link d-flex a-i-center j-c-center"
+          [routerLink]="device.lastRoute"
+        >
+          <i [c8yIcon]="'link'"></i>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #withExtra>
+      <!-- Two rows layout with extraData -->
+      <div class="d-flex flex-col p-l-16 p-b-8 p-r-16">
+        <div class="w-100 d-flex flex-row j-c-between font-bold">
+          <span>{{ device?.['name'] }}</span>
+          <span>{{ device?.lastVisit | date : "short" }}</span>
+        </div>
+        <div class="w-100 d-flex flex-row a-i-center j-c-between">
+          <div class="icon d-flex a-i-center j-c-center">
+            <i [c8yIcon]="'c8y-device'"></i>
+          </div>
+          <span *ngFor="let extra of device?.extraData">{{ extra }}</span>
+          <div
+            class="m-l-16 device-link d-flex a-i-center j-c-center"
+            [routerLink]="device.lastRoute"
+          >
+            <i [c8yIcon]="'link'"></i>
+          </div>
+        </div>
+      </div>
+    </ng-template>
   </div>
-</div>
+</ng-container>
+
+<ng-template #noDevices>
+  <div
+    class="w-100 d-flex j-c-center text-center flex-col"
+    *ngIf="devices?.length === 0"
+  >
+    <i [c8yIcon]="'snowflake-o'" style="font-size: 3rem" class="m-b-4"></i>
+    <strong>No History yet</strong>
+    <div>Devices are shown here when you visit them</div>
+  </div>
+</ng-template>

@@ -1,0 +1,14 @@
+<ng-container *ngIf="filteredData?.length">
+  You can optionally configure fragments you wanna see in the widget based on
+  this example device:
+
+  <div *ngFor="let item of filteredData">
+    <label>
+      <input
+        type="checkbox"
+        (change)="onCheckboxChange(item.path, item.value)"
+      />
+      {{ item.path }}: {{ item.value }}
+    </label>
+  </div>
+</ng-container>

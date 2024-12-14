@@ -13,13 +13,21 @@
 }
 
 .device-link {
-  width: 30px;
-  height: 30px;
   background-color: var(--c8y-navigator-active-bg);
-  transition: all 0.15s;
   cursor: pointer;
 }
 
+.icon,
+.device-link {
+  width: 30px;
+  height: 30px;
+  transition: all 0.15s;
+}
+
 .device-link:hover {
-  opacity: 0.9;
+  opacity: 0.7;
+}
+
+.font-bold {
+  font-weight: bold;
 }
