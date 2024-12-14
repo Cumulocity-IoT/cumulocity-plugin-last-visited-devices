@@ -1,5 +1,5 @@
 <ng-container *ngIf="devices.length; else noDevices">
-  <div class="w-100 d-flex flex-col" *ngFor="let device of devices">
+  <div class="w-100 d-flex flex-col m-b-8" *ngFor="let device of devices">
     <ng-container *ngIf="!device?.extraData?.length; else withExtra">
       <!-- Single row layout -->
       <div

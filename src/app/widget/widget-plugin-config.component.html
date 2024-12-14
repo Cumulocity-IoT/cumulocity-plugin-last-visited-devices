@@ -7,6 +7,7 @@
       <input
         type="checkbox"
         (change)="onCheckboxChange(item.path, item.value)"
+        [checked]="item.selected"
       />
       {{ item.path }}: {{ item.value }}
     </label>
