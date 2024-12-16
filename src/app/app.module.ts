@@ -6,7 +6,10 @@ import {
   CoreModule,
   RouterModule,
 } from '@c8y/ngx-components';
-import { CockpitDashboardModule } from '@c8y/ngx-components/context-dashboard';
+import {
+  CockpitDashboardModule,
+  DeviceContextDashboardModule,
+} from '@c8y/ngx-components/context-dashboard';
 
 import { IconDirective } from '@c8y/ngx-components';
 @NgModule({
@@ -16,6 +19,7 @@ import { IconDirective } from '@c8y/ngx-components';
     RouterModule.forRoot(),
     CoreModule.forRoot(),
     CockpitDashboardModule,
+    DeviceContextDashboardModule,
     IconDirective,
   ],
   bootstrap: [BootstrapComponent],

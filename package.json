@@ -1,12 +1,12 @@
 {
-  "name": "plugin",
+  "name": "last-visited-devices-plugin",
   "version": "1.0.0",
-  "author": "",
-  "description": "",
+  "author": "Christian Meyer",
+  "description": "A widget where you can see the devices you visited the last time works in cockpit and devicemanagement",
   "scripts": {
     "ng": "ng",
     "start": "ng serve -u https://psfactory.eu-latest.cumulocity.com",
-    "start-shell": "ng serve -u https://psfactory.eu-latest.cumulocity.com --shell cockpit",
+    "start-shell": "ng serve -u https://psfactory.eu-latest.cumulocity.com --shell devicemanagement",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

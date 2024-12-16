@@ -18,10 +18,11 @@ export default {
     noAppSwitcher: true,
     exports: [
       {
-        name: 'Example widget plugin',
+        name: 'Last visited devices plugin',
         module: 'WidgetPluginModule',
         path: './src/app/widget/widget-plugin.module.ts',
-        description: 'Adds a custom widget to the shell application',
+        description:
+          'A widget where you can see the devices you visited the last time works in cockpit and devicemanagement',
       },
     ],
   },
