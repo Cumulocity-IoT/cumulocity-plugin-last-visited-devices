@@ -29,5 +29,6 @@ Enjoy effortless device tracking with the Latest Devices Plugin!
 
 ---
 
-##Changelog:
-- Release v 1.0.0: First working plugin to show latest devices
+## Changelog:
+
+- **Release v 1.0.0**: First working plugin to show latest devices
