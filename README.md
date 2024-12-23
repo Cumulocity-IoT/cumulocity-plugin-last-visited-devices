@@ -24,9 +24,10 @@ Open the widget’s settings to choose which device settings appear in the list.
 - **Issues**: Submit bugs or feature requests in the issue tracker.
 - **Pull Requests**: Fork the repo and open a PR to contribute.
 
----
 
 Enjoy effortless device tracking with the Latest Devices Plugin!
 
-Changelog:
-Release v 1.0.0 - First working plugin to show latest devices
+---
+
+##Changelog:
+- Release v 1.0.0: First working plugin to show latest devices
