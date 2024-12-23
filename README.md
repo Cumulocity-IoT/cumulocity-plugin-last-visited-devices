@@ -1,33 +1,25 @@
-# Cumulocity widget plugin
+# Latest Devices Plugin
 
-This is the Cumulocity module federation plugin. Plugins can be developed like any Cumulocity application, but can be used at runtime by other applications. Therefore, they export an Angular module which can then be imported by any other application. The exports are defined in `package.json`:
+A **Cumulocity IoT** plugin that displays the most recently visited devices (with direct links) in both **Device Management** and **Cockpit**.
 
-```
-"exports": [
-  {
-     "name": "Example widget plugin",
-     "module": "WidgetPluginModule",
-     "path": "./widget/widget-plugin.module.ts",
-     "description": "Adds custom widget"
-  }
-]
-```
+![Widget Plugin Screenshot](src/assets/widget-plugin-pr.png)
 
-**How to start**
-Run the command below to scaffold a `widget` plugin.
+## Features
+- **Recent Devices List**: Automatically shows your last visited devices.
+- **Quick Navigation**: Click any device to open its details instantly.
+- **Easy Configuration**: Pick which device settings to display via the widget settings.
+- **Flexible Placement**: Works seamlessly in both Device Management and Cockpit.
 
-```
-c8ycli new <yourPluginName> widget-plugin
-```
+## Advantages
+This plugin saves time by letting you jump straight to frequently visited devices, keeps everything organized by tracking important device settings, and simplifies configuration through the built-in widget settings without requiring any external tools.
 
-As the app.module is a typical Cumuloctiy application, any new plugin can be tested via the CLI:
+## Configuration
+Open the widget’s settings to choose which device settings appear in the list.
 
-```
-npm start -- --shell cockpit
-```
+## Support & Contributions
+- **Issues**: Submit bugs or feature requests in the issue tracker.
+- **Pull Requests**: Fork the repo and open a PR to contribute.
 
-In the Module Federation terminology, `widget` plugin is called `remote` and the `cokpit` is called `shell`. Modules provided by this `widget` will be loaded by the `cockpit` application at the runtime. This plugin provides a basic custom widget that can be accessed through the `Add widget` menu.
+---
 
-> Note that the `--shell` flag creates a proxy to the cockpit application and provides` WidgetPluginModule` as an `remote` via URL options.
-
-Also deploying needs no special handling and can be simply done via `npm run deploy`. As soon as the application has exports it will be uploaded as a plugin.
+Enjoy effortless device tracking with the Latest Devices Plugin!
